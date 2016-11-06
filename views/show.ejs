@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='utf-8'>
+	<title>Dogs Dashboard</title>	
+	<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+	<link rel='stylesheet' type='text/css' href='/static/styles/style.css'>
+</head>
+<body>
+	<div class='container'>
+		<h1>Dog Shelter</h1>
+		<hr>
+		<h3><%= dog.name %></h3>
+		<p>Age: <%= dog.age %> years old</p>
+		<p>Breed: <%= dog.breed %></p>
+		<p>Weight: <%= dog.weight %></p>
+		<hr>
+		<form class='inline' action='/dogs/<%= dog.id %>/edit' method='GET'>
+			<input class='btn btn-default' type='submit' value='Edit'>
+		</form>
+		<form class='inline' action='/dogs/<%= dog.id %>/destroy' method='POST'>
+			<input class='btn btn-default' type='submit' value='Delete'>
+		</form>
+		<form class='inline' action='/'>
+			<input class='btn btn-default' type='submit' value='Go Back'>
+		</form>
+	</div>
+</body>
+</html>

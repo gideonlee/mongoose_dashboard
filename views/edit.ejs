@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='utf-8'>
+	<title>Dogs Dashboard</title>	
+	<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+	<link rel='stylesheet' type='text/css' href='/static/styles/style.css'>
+</head>
+<body>
+	<div class='container'>
+		<h1>Dog Shelter</h1>
+		<hr>
+		<form class='edit' action='/dogs/<%= dog.id %>' method='POST'>
+			<label>Name: </label>
+			<input type='text' name='name' value='<%= dog.name %>'>
+			<label>Age: </label>
+			<input type='number' name='age' value='<%= dog.age %>'>
+			<label>Breed: </label>
+			<input type='text' name='breed' value='<%= dog.breed %>'>
+			<label>Weight: </label>
+			<input type='number' name='weight' value='<%= dog.weight %>'>
+			<input class='btn btn-default' type='submit' value='Update'>
+		</form>
+		<hr>
+		<form class='inline' action='/dogs/<%= dog.id %>' method='GET'>
+			<input class='btn btn-default' type='submit' value='Show'>
+		</form>
+		<form class='inline' action='/dogs/<%= dog.id %>/destroy' method='POST'>
+			<input class='btn btn-default' type='submit' value='Delete'>
+		</form>
+		<form class='inline' action='/' method='GET'>
+			<input class='btn btn-default' type='submit' value='Go Back'>
+		</form>
+	</div>
+</body>
+</html>

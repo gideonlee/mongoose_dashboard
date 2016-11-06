@@ -1,0 +1,43 @@
+* {
+	margin: 0 auto;
+}
+/* index */
+div.outline {
+	outline: 2px solid black;
+	display: inline-block;
+	width: 200px;
+	margin-right: 10px;
+	padding: 5px;
+}
+	div.outline p {
+		text-align: center;
+	}
+	div.outline form {
+		display: inline-block;
+	}
+	div.outline div {
+		text-align: center;
+	}
+
+/* New */
+form.new label {
+	display: block;
+}
+form.new input {
+	display: block;
+	margin-bottom: 10px;
+}
+
+/* Show */
+.inline {
+	display: inline-block;
+}
+
+/* Edit */
+form.edit label {
+	display: block;
+}
+form.edit input.btn {
+	display: block;
+	margin-top: 10px;
+}

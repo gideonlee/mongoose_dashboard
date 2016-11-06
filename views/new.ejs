@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='utf-8'>
+	<title>Dogs Dashboard</title>	
+	<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+	<link rel='stylesheet' type='text/css' href='/static/styles/style.css'>
+</head>
+<body>
+	<div class='container'>
+		<h1>Dog Shelter</h1>
+		<h3>Enter New Dog Information Below</h3>
+		<form class='new' action='/dogs' method='POST'>
+			<label>Name:</label>
+			<input type='text' name='name'>
+			<label>Age:</label>
+			<input type='number' name='age'>
+			<label>Breed:</label>
+			<input type='text' name='breed'>
+			<label>Weight: (lbs.)</label>
+			<input type='number' name='weight'>
+			<input class='btn btn-default' type='submit' value='Add New Dog'>
+		</form>
+		<hr>
+	</div>
+</body>
+</html>
